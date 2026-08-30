@@ -1,13 +1,5 @@
 {
-  "itemGroup.jacesmegamod": "Example Mod Tab",
-  "block.jacesmegamod.example_block": "Example Block",
-  "item.jacesmegamod.example_item": "Example Item",
+  "item.jacesmegamod.gothite_ingot": "Gothite Ingot",
+  "item.jacesmegamod.balloonite": "Balloonite"
 
-  "jacesmegamod.configuration.title": "JacesMegaMod Configs",
-  "jacesmegamod.configuration.section.jacesmegamod.common.toml": "JacesMegaMod Configs",
-  "jacesmegamod.configuration.section.jacesmegamod.common.toml.title": "JacesMegaMod Configs",
-  "jacesmegamod.configuration.items": "Item List",
-  "jacesmegamod.configuration.logDirtBlock": "Log Dirt Block",
-  "jacesmegamod.configuration.magicNumberIntroduction": "Magic Number Text",
-  "jacesmegamod.configuration.magicNumber": "Magic Number"
 }

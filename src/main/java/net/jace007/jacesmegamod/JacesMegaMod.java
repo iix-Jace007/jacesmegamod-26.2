@@ -1,5 +1,6 @@
 package net.jace007.jacesmegamod;
 
+import net.jace007.jacesmegamod.item.JaceMMItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -30,6 +31,8 @@ public class JacesMegaMod {
     public JacesMegaMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+        JaceMMItems.register(modEventBus);
+
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
