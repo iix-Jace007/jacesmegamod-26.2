@@ -1,5 +1,6 @@
 package net.jace007.jacesmegamod;
 
+import net.jace007.jacesmegamod.creativemodetab.JacesMMCMT;
 import net.jace007.jacesmegamod.item.JaceMMItems;
 import org.slf4j.Logger;
 
@@ -31,6 +32,8 @@ public class JacesMegaMod {
     public JacesMegaMod(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        JacesMMCMT.register(modEventBus);
         JaceMMItems.register(modEventBus);
 
 

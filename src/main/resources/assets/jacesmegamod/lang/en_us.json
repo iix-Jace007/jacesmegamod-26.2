@@ -1,5 +1,7 @@
 {
   "item.jacesmegamod.gothite_ingot": "Gothite Ingot",
-  "item.jacesmegamod.balloonite": "Balloonite"
+  "item.jacesmegamod.balloonite": "Balloonite",
+  "creativetab.jacesmegamod.jmm_ores": "JMM Ores",
+  "creativetab.jacesmegamod.jmm_woods": "JMM Woods"
 
 }
