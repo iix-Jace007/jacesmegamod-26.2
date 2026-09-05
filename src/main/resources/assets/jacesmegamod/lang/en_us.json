@@ -1,6 +1,10 @@
 {
   "item.jacesmegamod.gothite_ingot": "Gothite Ingot",
   "item.jacesmegamod.balloonite": "Balloonite",
+
+  "block.jacesmegamod.balloonite_block": "Block of Balloonite",
+  "block.jacesmegamod.balloonite_ore": "Balloonite Ore",
+
   "creativetab.jacesmegamod.jmm_ores": "JMM Ores",
   "creativetab.jacesmegamod.jmm_woods": "JMM Woods"
 

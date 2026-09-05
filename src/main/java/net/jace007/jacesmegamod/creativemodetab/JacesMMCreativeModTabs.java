@@ -1,6 +1,7 @@
 package net.jace007.jacesmegamod.creativemodetab;
 
 import net.jace007.jacesmegamod.JacesMegaMod;
+import net.jace007.jacesmegamod.block.JacesMMBlocks;
 import net.jace007.jacesmegamod.item.JaceMMItems;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
@@ -12,7 +13,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
 
-public class JacesMMCMT {
+public class JacesMMCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, JacesMegaMod.MOD_ID);
 
@@ -22,6 +23,8 @@ public class JacesMMCMT {
                     .withTabsAfter(Identifier.fromNamespaceAndPath(JacesMegaMod.MOD_ID, "jmm_wood_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(JaceMMItems.BALLOONITE);
+                        output.accept(JacesMMBlocks.BALLOONITE_BLOCK);
+                        output.accept(JacesMMBlocks.BALLOONITE_ORE);
                         output.accept(JaceMMItems.GOTHITE_INGOT);
 
 

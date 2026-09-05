@@ -1,14 +1,12 @@
 package net.jace007.jacesmegamod;
 
-import net.jace007.jacesmegamod.creativemodetab.JacesMMCMT;
+import net.jace007.jacesmegamod.block.JacesMMBlocks;
+import net.jace007.jacesmegamod.creativemodetab.JacesMMCreativeModTabs;
 import net.jace007.jacesmegamod.item.JaceMMItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.world.item.CreativeModeTabs;
-import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.Mod;
@@ -33,8 +31,9 @@ public class JacesMegaMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        JacesMMCMT.register(modEventBus);
+        JacesMMCreativeModTabs.register(modEventBus);
         JaceMMItems.register(modEventBus);
+        JacesMMBlocks.register(modEventBus);
 
 
         NeoForge.EVENT_BUS.register(this);
