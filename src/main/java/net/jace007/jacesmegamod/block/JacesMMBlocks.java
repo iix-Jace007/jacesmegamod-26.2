@@ -1,11 +1,18 @@
 package net.jace007.jacesmegamod.block;
 
+import com.mojang.serialization.MapCodec;
 import net.jace007.jacesmegamod.JacesMegaMod;
+import net.jace007.jacesmegamod.block.custom.JacesFRPBlock;
+import net.jace007.jacesmegamod.block.custom.JacesMMPlanks;
 import net.jace007.jacesmegamod.item.JaceMMItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -16,12 +23,42 @@ public class JacesMMBlocks {
     public static final DeferredRegister.Blocks BLOCKS =
             DeferredRegister.createBlocks(JacesMegaMod.MOD_ID);
 
+    // Ore Test
     public static final DeferredBlock<Block> BALLOONITE_BLOCK = registerBlock("balloonite_block",
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
     public static final DeferredBlock<Block> BALLOONITE_ORE = registerBlock("balloonite_ore",
             properties -> new Block(properties.strength(4f)
                     .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+
+    // Aaron Mulberry
+    // Abby Cherry
+    // Abyssal Mangrove
+    // Ace Blackwood
+    // Adrian Sycamore
+    // Agatha Cypress
+    // Agrabah Cedar
+    // Ajay Loner
+    // Alanth
+    // Albon Willow
+    // Aleister Ash
+    // Alex Redwood
+    // Alexander Hawthorn
+    // All Aboard Aspen
+    // Allmen Oak
+    // Almirola Walnut
+    // Amber Rosewood
+    // Applebrook
+    // Asparagus Alder
+    // Aspenthine
+    // Astral Grove
+    // Astromech Amberwood
+    // Aubryn Hollow
+    // Audraflora Oak
+    // Aurelia Grove
+    // Avalanche Grove
+    // Awsomeleaf Starwood
+    // Axiom Starwood
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
