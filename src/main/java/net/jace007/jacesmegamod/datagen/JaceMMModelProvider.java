@@ -7,7 +7,9 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.model.ModelTemplates;
+import net.minecraft.client.data.models.model.TexturedModel;
 import net.minecraft.data.PackOutput;
+import net.minecraft.world.level.block.Block;
 
 public class JaceMMModelProvider extends ModelProvider {
     public JaceMMModelProvider(PackOutput output) {
@@ -22,5 +24,43 @@ public class JaceMMModelProvider extends ModelProvider {
         /* Blocks */
         blockModels.createTrivialCube(JacesMMBlocks.BALLOONITE_BLOCK.get());
         blockModels.createTrivialCube(JacesMMBlocks.BALLOONITE_ORE.get());
+
+        blockModels.woodProvider(JacesMMBlocks.AGRABAH_CEDAR_LOG.get())
+                .logWithHorizontal(JacesMMBlocks.AGRABAH_CEDAR_LOG.get())
+                .wood(JacesMMBlocks.AGRABAH_CEDAR_WOOD.get());
+
+        blockModels.woodProvider(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG.get())
+                .logWithHorizontal(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG.get())
+                .wood(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_WOOD.get());
+
+        blockModels.createTrivialCube(JacesMMBlocks.AGRABAH_CEDAR_PLANKS.get());
+
+        blockModels.createTintedLeaves(JacesMMBlocks.AGRABAH_CEDAR_LEAVES.get(),
+                TexturedModel.LEAVES, -2012265);
+
+        //blockModels.createPlantWithDefaultItem(JacesMMBlocks.AGRABAH_CEDAR_SAPLING.get(),
+        //        JacesMMBlocks.POTTED_AGRABAH_CEDAR_SAPLING.get(),
+        //        BlockModelGenerators.PlantType.NOT_TINTED));
+
+        blockModels.family(JacesMMBlocks.AGRABAH_CEDAR_PLANKS.get())
+                .stairs(JacesMMBlocks.AGRABAH_CEDAR_STAIRS.get())
+                .slab(JacesMMBlocks.AGRABAH_CEDAR_SLAB.get())
+                .pressurePlate(JacesMMBlocks.AGRABAH_CEDAR_PRESSUREPLATE.get())
+                .button(JacesMMBlocks.AGRABAH_CEDAR_BUTTON.get())
+                .fence(JacesMMBlocks.AGRABAH_CEDAR_FENCE.get())
+                .fenceGate(JacesMMBlocks.AGRABAH_CEDAR_FENCE_GATE.get())
+                .door(JacesMMBlocks.AGRABAH_CEDAR_DOOR.get())
+                .trapdoor(JacesMMBlocks.AGRABAH_CEDAR_TRAPDOOR.get());
+
+        blockModels.family(JacesMMBlocks.AGRABAH_CEDAR_LOG.get())
+                .stairs(JacesMMBlocks.AGRABAH_CEDAR_LOG_STAIRS.get())
+                .slab(JacesMMBlocks.AGRABAH_CEDAR_LOG_SLAB.get())
+                .fence(JacesMMBlocks.AGRABAH_CEDAR_LOG_FENCE.get())
+                .fenceGate(JacesMMBlocks.AGRABAH_CEDAR_LOG_FENCE_GATE.get())
+                .trapdoor(JacesMMBlocks.AGRABAH_CEDAR_LOG_TRAPDOOR.get());
+
+        blockModels.family(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG.get())
+                .stairs(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG_STAIRS.get())
+                .slab(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG_SLAB.get());
     }
 }

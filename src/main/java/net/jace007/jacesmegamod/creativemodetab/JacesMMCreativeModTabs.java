@@ -36,7 +36,26 @@ public class JacesMMCreativeModTabs {
                     .title(Component.translatable("creativetab.jacesmegamod.jmm_woods"))
                     .displayItems((itemDisplayParameters, output) -> {
 
-
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_WOOD);
+                        output.accept(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG);
+                        output.accept(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_WOOD);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_PLANKS);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_STAIRS);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_STAIRS);
+                        output.accept(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG_STAIRS);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_SLAB);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_SLAB);
+                        output.accept(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG_SLAB);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_FENCE);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_FENCE);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_FENCE_GATE);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_FENCE_GATE);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_DOOR);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_TRAPDOOR);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_TRAPDOOR);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_PRESSUREPLATE);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_BUTTON);
 
                     }).build());
 

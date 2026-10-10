@@ -36,6 +36,7 @@ public class JacesMegaMod {
         JacesMMBlocks.register(modEventBus);
 
 
+
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);

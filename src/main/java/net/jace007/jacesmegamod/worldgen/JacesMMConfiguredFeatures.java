@@ -7,10 +7,18 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
+import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 
@@ -21,7 +29,11 @@ public class JacesMMConfiguredFeatures {
     // A Tree ==> Feature -> once Configured (you give values)
     // CF -> Describes HOW something looks like, how it is built.
     public static final ResourceKey<ConfiguredFeature<?, ?>>
-    OVERWORLD_BALLOONITE_ORE_KEY = registerKey("overworld_ballonite_ore");
+            OVERWORLD_BALLOONITE_ORE_KEY = registerKey("overworld_ballonite_ore");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>>
+            AGRABAH_CEDAR_KEY = registerKey("agrabah_cedar");
+
 
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
@@ -34,6 +46,14 @@ public class JacesMMConfiguredFeatures {
                 OreConfiguration(List.of(
                         OreConfiguration.target(stoneReplaceables,
                                 JacesMMBlocks.BALLOONITE_ORE.get().defaultBlockState())),7));
+
+        register(context, AGRABAH_CEDAR_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(JacesMMBlocks.AGRABAH_CEDAR_LOG.get()),
+                        new StraightTrunkPlacer(3, 4, 2),
+                BlockStateProvider.simple(JacesMMBlocks.AGRABAH_CEDAR_LEAVES.get()),
+                        new BlobFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0), 1),
+                new TwoLayersFeatureSize(1, 0, 2),
+                BlockStateProvider.simple(Blocks.GRASS_BLOCK)).build());
 
     }
 
