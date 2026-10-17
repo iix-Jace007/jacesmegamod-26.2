@@ -12,6 +12,7 @@ public class JacesMMTags {
     }
     public static class Items {
         public static final TagKey<Item> AGRABAH_CEDAR_LOGS = createTag("agrabah_cedar_logs");
+        public static final TagKey<Item> ATOWN_TRUMPHWOOD_LOGS = createTag("atown_trumphwood_logs");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Identifier.fromNamespaceAndPath(JacesMegaMod.MOD_ID, name));

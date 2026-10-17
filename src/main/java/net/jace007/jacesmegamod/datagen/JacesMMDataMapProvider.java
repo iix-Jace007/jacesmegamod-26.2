@@ -16,7 +16,7 @@ public class JacesMMDataMapProvider extends DataMapProvider {
      * @param packOutput     the output location
      * @param lookupProvider a {@linkplain CompletableFuture} supplying the registries
      */
-    protected JacesMMDataMapProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+    public JacesMMDataMapProvider(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
         super(packOutput, lookupProvider);
     }
 
@@ -24,6 +24,8 @@ public class JacesMMDataMapProvider extends DataMapProvider {
     protected void gather(HolderLookup.Provider provider) {
 
         builder(NeoForgeDataMaps.STRIPPABLES)
+                .add(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG, new Strippable(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()), false)
+                .add(JacesMMBlocks.ATOWN_TRUMPHWOOD_WOOD, new Strippable(JacesMMBlocks.ATOWN_TRUMPHWOOD_WOOD.get()), false)
                 .add(JacesMMBlocks.AGRABAH_CEDAR_LOG, new Strippable(JacesMMBlocks.AGRABAH_CEDAR_LOG.get()), false)
                 .add(JacesMMBlocks.AGRABAH_CEDAR_WOOD, new Strippable(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_WOOD.get()), false);
 

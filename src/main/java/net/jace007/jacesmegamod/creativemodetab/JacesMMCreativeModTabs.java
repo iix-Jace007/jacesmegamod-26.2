@@ -36,6 +36,28 @@ public class JacesMMCreativeModTabs {
                     .title(Component.translatable("creativetab.jacesmegamod.jmm_woods"))
                     .displayItems((itemDisplayParameters, output) -> {
 
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_WOOD);
+                        output.accept(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG);
+                        output.accept(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_WOOD);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_STAIRS);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_STAIRS);
+                        output.accept(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG_STAIRS);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_SLAB);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_SLAB);
+                        output.accept(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG_SLAB);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_FENCE);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_FENCE);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_FENCE_GATE);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_FENCE_GATE);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_DOOR);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_TRAPDOOR);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_TRAPDOOR);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_PRESSUREPLATE);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_BUTTON);
+                        output.accept(JacesMMBlocks.ATOWN_TRUMPHWOOD_SAPLING);
+
                         output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG);
                         output.accept(JacesMMBlocks.AGRABAH_CEDAR_WOOD);
                         output.accept(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG);
@@ -56,6 +78,7 @@ public class JacesMMCreativeModTabs {
                         output.accept(JacesMMBlocks.AGRABAH_CEDAR_LOG_TRAPDOOR);
                         output.accept(JacesMMBlocks.AGRABAH_CEDAR_PRESSUREPLATE);
                         output.accept(JacesMMBlocks.AGRABAH_CEDAR_BUTTON);
+                        output.accept(JacesMMBlocks.AGRABAH_CEDAR_SAPLING);
 
                     }).build());
 

@@ -28,15 +28,4 @@ public class JacesFRPBlock extends RotatedPillarBlock {
         return 5;
     }
 
-    @Override
-    public @Nullable BlockState getToolModifiedState(BlockState state, UseOnContext context,
-                                                     ItemAbility itemAbility, boolean simulate) {
-        if (context.getItemInHand().getItem() instanceof AxeItem) {
-
-
-        }
-
-        return super.getToolModifiedState(state, context, itemAbility, simulate);
-
-    }
 }

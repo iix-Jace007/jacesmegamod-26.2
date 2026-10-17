@@ -34,6 +34,49 @@ public class JacesMMRecipeProvider extends RecipeProvider {
     @Override
     protected void buildRecipes() {
 
+        // ATOWN_TRUMPHWOOD
+        woodFromLogs(JacesMMBlocks.ATOWN_TRUMPHWOOD_WOOD, JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG);
+        woodFromLogs(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG, JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG);
+        planksFromLog(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS, JacesMMTags.Items.ATOWN_TRUMPHWOOD_LOGS, 4);
+        stairBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_STAIRS.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        stairBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_STAIRS.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .group("atown_trumphwood").save(output);
+        stairBuilder(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG_STAIRS.get(), Ingredient.of(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG))
+                .unlockedBy(getHasName(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG.get()), has(JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG))
+                .group("atown_trumphwood").save(output);
+        slab(RecipeCategory.BUILDING_BLOCKS, JacesMMBlocks.ATOWN_TRUMPHWOOD_SLAB.get(), JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get());
+        slab(RecipeCategory.BUILDING_BLOCKS, JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_SLAB.get(), JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get());
+        slab(RecipeCategory.BUILDING_BLOCKS, JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG_SLAB.get(), JacesMMBlocks.STRIPPED_ATOWN_TRUMPHWOOD_LOG);
+        fenceBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_FENCE.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        fenceBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_FENCE.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .group("atown_trumphwood").save(output);
+        fenceGateBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_FENCE_GATE.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        fenceGateBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_FENCE_GATE.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .group("atown_trumphwood").save(output);
+        doorBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_DOOR.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        trapdoorBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_TRAPDOOR.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        trapdoorBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG_TRAPDOOR.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG))
+                .group("atown_trumphwood").save(output);
+        buttonBuilder(JacesMMBlocks.ATOWN_TRUMPHWOOD_BUTTON.get(), Ingredient.of(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()))
+                .unlockedBy(getHasName(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS.get()), has(JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS))
+                .group("atown_trumphwood").save(output);
+        pressurePlate(JacesMMBlocks.ATOWN_TRUMPHWOOD_PRESSUREPLATE.get(), JacesMMBlocks.ATOWN_TRUMPHWOOD_PLANKS);
+
+        // Agrabah Cedar
         woodFromLogs(JacesMMBlocks.AGRABAH_CEDAR_WOOD, JacesMMBlocks.AGRABAH_CEDAR_LOG);
         woodFromLogs(JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG, JacesMMBlocks.STRIPPED_AGRABAH_CEDAR_LOG);
         planksFromLog(JacesMMBlocks.AGRABAH_CEDAR_PLANKS, JacesMMTags.Items.AGRABAH_CEDAR_LOGS, 4);

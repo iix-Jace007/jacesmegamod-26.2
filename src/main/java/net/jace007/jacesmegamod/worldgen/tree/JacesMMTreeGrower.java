@@ -7,6 +7,8 @@ import net.minecraft.world.level.block.grower.TreeGrower;
 import java.util.Optional;
 
 public class JacesMMTreeGrower {
+    public static final TreeGrower ATOWN_TRUMPHWOOD = new TreeGrower(JacesMegaMod.MOD_ID + ":atown_trumphwood",
+            Optional.empty(), Optional.of(JacesMMConfiguredFeatures.AGRABAH_CEDAR_KEY), Optional.empty());
     public static final TreeGrower AGRABAH_CEDAR = new TreeGrower(JacesMegaMod.MOD_ID + ":agrabah_cedar",
             Optional.empty(), Optional.of(JacesMMConfiguredFeatures.AGRABAH_CEDAR_KEY), Optional.empty());
 }

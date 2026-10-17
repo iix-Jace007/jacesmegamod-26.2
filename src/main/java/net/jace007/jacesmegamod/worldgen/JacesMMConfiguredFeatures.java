@@ -33,6 +33,8 @@ public class JacesMMConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>>
             AGRABAH_CEDAR_KEY = registerKey("agrabah_cedar");
+    public static final ResourceKey<ConfiguredFeature<?, ?>>
+            ATOWN_TRUMPHWOOD_KEY = registerKey("atown_trumphwood");
 
 
 
@@ -51,6 +53,13 @@ public class JacesMMConfiguredFeatures {
                 BlockStateProvider.simple(JacesMMBlocks.AGRABAH_CEDAR_LOG.get()),
                         new StraightTrunkPlacer(3, 4, 2),
                 BlockStateProvider.simple(JacesMMBlocks.AGRABAH_CEDAR_LEAVES.get()),
+                        new BlobFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0), 1),
+                new TwoLayersFeatureSize(1, 0, 2),
+                BlockStateProvider.simple(Blocks.GRASS_BLOCK)).build());
+        register(context, ATOWN_TRUMPHWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
+                BlockStateProvider.simple(JacesMMBlocks.ATOWN_TRUMPHWOOD_LOG.get()),
+                        new StraightTrunkPlacer(3, 4, 2),
+                BlockStateProvider.simple(JacesMMBlocks.ATOWN_TRUMPHWOOD_LEAVES.get()),
                         new BlobFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0), 1),
                 new TwoLayersFeatureSize(1, 0, 2),
                 BlockStateProvider.simple(Blocks.GRASS_BLOCK)).build());
